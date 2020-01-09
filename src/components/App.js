@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import '../css/index.css'
 import apiKey from '../config'
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Switch
 } from 'react-router-dom'
@@ -111,7 +111,7 @@ export default class App extends Component {
 // Rendering the components and passing them props
   render() { 
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="container">
 
         <SearchForm onSearch={ this.performSearch } loading={ this.state.main.loading } title={ this.state.main.title }
@@ -127,7 +127,7 @@ export default class App extends Component {
                 <Route component={badUrl} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
