@@ -32,7 +32,7 @@ export default class SearchForm extends Component {
             {(this.props.title === '' || this.props.title === 'undefined')
             ? <Redirect exact to={ `/` } />
             : <Redirect to={ `/search/${this.props.title}` }/>
-            })
+            }
       </form>      
     );
   }
